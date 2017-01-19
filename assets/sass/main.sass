@@ -1,6 +1,6 @@
 @import ../../bower_components/normalize-css/normalize
 @import variables
-
+@import buttons
 
 body
   font-family: "Roboto", sans-serif
@@ -18,16 +18,23 @@ h2
 @import intro
 
 .vanraemdonckslide
-  padding: 30px 0
+
   img.vrlogo
     width: 258px
     height: auto
     margin-bottom: 50px
   p
-    max-width: 75%
+    max-width: 70%
+  @media screen and (min-width: $screen-sm-min)
+    .row
+      display: flex
+    .leftcol
+      padding: 100px
+    .rightcol
+      background: url("../img/moderne-haardwand.png") no-repeat
+      background-size: cover
 
 .greybar
   width: 100%
   background: #eee
   margin-top: 50px
-  padding: 100px
