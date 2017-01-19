@@ -1,0 +1,179 @@
+html, body
+  height: 100%
+
+.intro
+  background: url("../img/intro_background.jpg") #000 center center no-repeat
+  background-size: cover
+  color: #fff
+  width: 100%
+  height: 100%
+  @media screen and (min-width: $screen-lg-min)
+    height: 85vh
+
+  .contentwrapper
+    position: absolute
+    padding: 50px 0
+    text-align: center
+    width: 100%
+    @media screen and (min-width: $screen-sm-min)
+      top: 50%
+      transform: translateY(-50%)
+      -webkit-transform: translateY(-50%)
+      -moz-transform: translateY(-50%)
+      -ms-transform: translateY(-50%)
+
+    .logo
+      width: 220px
+      margin-bottom: 30px
+      @media screen and (min-width: $screen-sm-min)
+        width: 300px
+        margin-bottom: 30px
+      @media screen and (min-width: $screen-lg-min)
+        margin-bottom: 50px
+
+    .choose
+      font-weight: 300
+      font-size: 3.5vw
+      margin: 30px 0
+      @media screen and (min-width: $screen-sm-min)
+        font-size: 18px
+        margin: 30px 0
+      @media screen and (min-width: $screen-lg-min)
+        margin: 50px 0
+
+    h1
+      text-transform: uppercase
+      font-size: 20px
+      margin: 0
+      font-weight: 900
+      @media screen and (min-width: $screen-sm-min)
+        font-size: 40px
+      @media screen and (min-width: $screen-lg-min)
+        font-size: 66px
+
+    a
+      color: #fff
+      text-decoration: none
+      &:hover, &:focus
+        color: $main-color
+
+.introdivider
+  height: 15vh
+
+.divisions
+  margin-top: 50px
+  @media screen and (min-width: $screen-sm-min)
+    display: flex
+    justify-content: center
+  @media screen and (min-width: $screen-lg-min)
+    margin: 0
+  @media screen and (min-width: 1500px)
+    margin: 0 10%
+  a
+    margin-bottom: 20px
+    border-bottom: 1px solid #555
+    border-top: 1px solid #555
+    @media screen and (min-width: $screen-sm-min)
+      width: 30%
+      margin-right: 3%
+      border: none
+    @media screen and (min-width: $screen-md-min)
+      width: 25%
+      margin-right: 3%
+    &.last
+      margin-right: 0
+
+  a
+    .titlewrapper
+      background: rgb(0, 0, 0) // fallback older browsers
+      background: rgba(0, 0, 0, 0.5)
+      text-align: left
+      padding: 30px
+      position: relative
+      h2
+        color: #fff
+      .arrowright
+        position: absolute
+        font-size: 0.9em
+        right: 30px
+        top: 33px
+        @include transition($default_transition_duration)
+      h2
+        font-size: 17px
+        font-weight: 700
+        margin: 0
+        text-align: left
+        @include transition($default_transition_duration)
+        @media screen and (min-width: $screen-lg-min)
+          font-size: 20px
+    @media screen and (min-width: $screen-sm-min)
+      .imagewrapper
+        width: 100%
+        height: 225px
+        overflow: hidden
+        position: relative
+        margin-top: -1px // Chrome fix
+        .image
+          width: 100%
+          height: 225px
+          background-size: cover
+          @include transition($default_transition_duration)
+    @media screen and (min-width: $screen-lg-min)
+      &:hover .image
+        transform: scale(1.2)
+        filter: grayscale(100%)
+        -webkit-filter: grayscale(100%)
+      &:hover .hoverbox
+        visibility: visible
+        opacity: 1
+      .imagewrapper, .imagewrapper .image
+        height: 335px
+      .hoverbox
+        position: absolute
+        background: rgb(0, 0, 0) // fallback older browsers
+        background: rgba(0, 0, 0, 0.7)
+        width: 100%
+        height: 100%
+        z-index: 999
+        visibility: hidden
+        opacity: 0
+        @include transition($default_transition_duration)
+        .content
+          position: absolute
+          top: 50%
+          transform: translateY(-50%)
+          -webkit-transform: translateY(-50%)
+          -moz-transform: translateY(-50%)
+          -ms-transform: translateY(-50%)
+          text-align: center
+          width: 100%
+          h4
+            margin: 0
+            text-align: center
+            font-size: 25px
+            line-height: 40px
+            span
+              color: $main-color
+          h5
+            font-weight: 300
+            font-size: 15px
+            margin: 30px 0 0 0
+@media screen and (max-width: $screen-lg-min)
+  .division .imagewrapper .hoverbox
+    display: none
+
+.intro .contentwrapper a
+  &:hover, &:focus
+    color: #fff
+@media screen and (min-height: 950px)
+  a .division .imagewrapper, a .division .imagewrapper .image
+    height: 400px
+  .intro
+    height: 80vh
+
+.divisions .haardaccessoires .image
+  background: url("../img/shopboxes/haardaccessoires.jpg")
+.divisions .haardenenkachels .image
+  background: url("../img/shopboxes/haarden-en-kachels.jpg")
+.divisions .primo-barbecue .image
+  background: url("../img/shopboxes/primo-barbecue.jpg")
