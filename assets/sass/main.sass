@@ -2,6 +2,10 @@
 @import variables
 @import buttons
 
+@media (min-width: 1200px)
+  .container
+    width: 1240px
+
 body
   font-family: "Roboto", sans-serif
   font-size: 18.9px
@@ -10,31 +14,106 @@ body
   font-weight: 300
 h2
   font-weight: 300
-  font-size: 38px
-  color: #868686
+  font-size: 35px
+  color: #555
   text-align: center
-  margin: 30px 0
+  margin: 50px 0
+  @media screen and (max-width: $screen-sm-min)
+    font-size: 25px
+a
+  color: $main-color
+  &:hover
+    color: $main-color
+    text-decoration: underline
+a.vrlink
+  color: $vr-color
+  &:hover
+    color: $vr-color
+    text-decoration: underline
 
 @import intro
 
-.vanraemdonckslide
-
+.vanraemdonckslide, .haardshopslide
+  p
+    span
+      color: $vr-color
   img.vrlogo
     width: 258px
     height: auto
     margin-bottom: 50px
-  p
-    max-width: 70%
+  .textcol
+    padding: 30px
   @media screen and (min-width: $screen-sm-min)
+    p
+      max-width: 70%
     .row
       display: flex
-    .leftcol
+    .textcol
       padding: 100px
-    .rightcol
-      background: url("../img/moderne-haardwand.png") no-repeat
-      background-size: cover
-
+.vanraemdonckslide
+  @media screen and (min-width: $screen-sm-min)
+      .imgcol
+        background: url("../img/moderne-haardwand.png") center center no-repeat
+        background-size: cover
+.haardshopslide
+  @media screen and (min-width: $screen-sm-min)
+      .imgcol
+        background: url("../img/vilten_houtmanden.jpg") bottom no-repeat
+        background-size: cover
 .greybar
   width: 100%
   background: #eee
-  margin-top: 50px
+
+#klantenservice
+  padding: 100px 30px
+  h2
+    margin: 0
+  p
+    margin: 50px 0
+  @media screen and (max-width: $screen-sm-min)
+    .mogelijkheid
+      margin-bottom: 30px
+  .bellen, .twitter, .facebook, .mailen
+    border-top: 1px solid #dcdcdc
+    border-left: 1px solid #dcdcdc
+    border-right: 1px solid #dcdcdc
+    border-bottom: 3px solid #ef4136
+    padding: 50px 20px
+    background: #ffffff
+    text-align: center
+    font-size: 14px
+    line-height: 150%
+    height: 100%
+    h3, h3 a
+      color: $main-color
+      text-decoration: none
+      font-size: 21px
+      font-weight: 300
+      margin-top: 30px
+      margin-bottom: 30px
+      &:hover
+        text-decoration: underline
+    p
+      color: #555
+      font-size: 14px
+    p.tel
+      font-size: 150%
+    .fa
+      color: #ccc
+    &:hover
+      color: $main-color
+footer
+  border-top: 1px solid #eee
+  text-align: center
+  padding: 50px
+  font-size: 13px
+  p
+    margin: 0
+  ul
+    list-style: none
+    margin: 0
+    li
+      display: inline
+      margin-right: 30px
+      &:last-child
+        margin-right: 0

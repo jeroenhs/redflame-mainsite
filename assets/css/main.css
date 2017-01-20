@@ -409,6 +409,10 @@ template {
     background-color: #e77931;
     border-color: #e77931; }
 
+@media (min-width: 1200px) {
+  .container {
+    width: 1240px; } }
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 18.9px;
@@ -418,10 +422,25 @@ body {
 
 h2 {
   font-weight: 300;
-  font-size: 38px;
-  color: #868686;
+  font-size: 35px;
+  color: #555;
   text-align: center;
-  margin: 30px 0; }
+  margin: 50px 0; }
+  @media screen and (max-width: 768px) {
+    h2 {
+      font-size: 25px; } }
+
+a {
+  color: #EF4136; }
+  a:hover {
+    color: #EF4136;
+    text-decoration: underline; }
+
+a.vrlink {
+  color: #e77931; }
+  a.vrlink:hover {
+    color: #e77931;
+    text-decoration: underline; }
 
 html, body {
   height: 100%; }
@@ -485,8 +504,9 @@ html, body {
       .intro .contentwrapper a:hover, .intro .contentwrapper a:focus {
         color: #EF4136; }
 
-.introdivider {
-  height: 15vh; }
+@media screen and (min-width: 1200px) {
+  .introdivider {
+    height: 15vh; } }
 
 .divisions {
   margin-top: 50px; }
@@ -613,24 +633,90 @@ html, body {
 .divisions .primo-barbecue .image {
   background: url("../img/shopboxes/primo-barbecue.jpg"); }
 
-.vanraemdonckslide img.vrlogo {
+.vanraemdonckslide p span, .haardshopslide p span {
+  color: #e77931; }
+
+.vanraemdonckslide img.vrlogo, .haardshopslide img.vrlogo {
   width: 258px;
   height: auto;
   margin-bottom: 50px; }
 
-.vanraemdonckslide p {
-  max-width: 70%; }
+.vanraemdonckslide .textcol, .haardshopslide .textcol {
+  padding: 30px; }
 
 @media screen and (min-width: 768px) {
-  .vanraemdonckslide .row {
+  .vanraemdonckslide p, .haardshopslide p {
+    max-width: 70%; }
+  .vanraemdonckslide .row, .haardshopslide .row {
     display: flex; }
-  .vanraemdonckslide .leftcol {
-    padding: 100px; }
-  .vanraemdonckslide .rightcol {
-    background: url("../img/moderne-haardwand.png") no-repeat;
+  .vanraemdonckslide .textcol, .haardshopslide .textcol {
+    padding: 100px; } }
+
+@media screen and (min-width: 768px) {
+  .vanraemdonckslide .imgcol {
+    background: url("../img/moderne-haardwand.png") center center no-repeat;
+    background-size: cover; } }
+
+@media screen and (min-width: 768px) {
+  .haardshopslide .imgcol {
+    background: url("../img/vilten_houtmanden.jpg") bottom no-repeat;
     background-size: cover; } }
 
 .greybar {
   width: 100%;
-  background: #eee;
-  margin-top: 50px; }
+  background: #eee; }
+
+#klantenservice {
+  padding: 100px 30px; }
+  #klantenservice h2 {
+    margin: 0; }
+  #klantenservice p {
+    margin: 50px 0; }
+  @media screen and (max-width: 768px) {
+    #klantenservice .mogelijkheid {
+      margin-bottom: 30px; } }
+  #klantenservice .bellen, #klantenservice .twitter, #klantenservice .facebook, #klantenservice .mailen {
+    border-top: 1px solid #dcdcdc;
+    border-left: 1px solid #dcdcdc;
+    border-right: 1px solid #dcdcdc;
+    border-bottom: 3px solid #ef4136;
+    padding: 50px 20px;
+    background: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    line-height: 150%;
+    height: 100%; }
+    #klantenservice .bellen h3, #klantenservice .bellen h3 a, #klantenservice .twitter h3, #klantenservice .twitter h3 a, #klantenservice .facebook h3, #klantenservice .facebook h3 a, #klantenservice .mailen h3, #klantenservice .mailen h3 a {
+      color: #EF4136;
+      text-decoration: none;
+      font-size: 21px;
+      font-weight: 300;
+      margin-top: 30px;
+      margin-bottom: 30px; }
+      #klantenservice .bellen h3:hover, #klantenservice .bellen h3 a:hover, #klantenservice .twitter h3:hover, #klantenservice .twitter h3 a:hover, #klantenservice .facebook h3:hover, #klantenservice .facebook h3 a:hover, #klantenservice .mailen h3:hover, #klantenservice .mailen h3 a:hover {
+        text-decoration: underline; }
+    #klantenservice .bellen p, #klantenservice .twitter p, #klantenservice .facebook p, #klantenservice .mailen p {
+      color: #555;
+      font-size: 14px; }
+    #klantenservice .bellen p.tel, #klantenservice .twitter p.tel, #klantenservice .facebook p.tel, #klantenservice .mailen p.tel {
+      font-size: 150%; }
+    #klantenservice .bellen .fa, #klantenservice .twitter .fa, #klantenservice .facebook .fa, #klantenservice .mailen .fa {
+      color: #ccc; }
+    #klantenservice .bellen:hover, #klantenservice .twitter:hover, #klantenservice .facebook:hover, #klantenservice .mailen:hover {
+      color: #EF4136; }
+
+footer {
+  border-top: 1px solid #eee;
+  text-align: center;
+  padding: 50px;
+  font-size: 13px; }
+  footer p {
+    margin: 0; }
+  footer ul {
+    list-style: none;
+    margin: 0; }
+    footer ul li {
+      display: inline;
+      margin-right: 30px; }
+      footer ul li:last-child {
+        margin-right: 0; }
